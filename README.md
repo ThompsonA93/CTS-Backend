@@ -23,3 +23,12 @@ To shutdown and/or delete the container, refer to these commands:
 
 
 ## 
+
+
+
+# Troubleshooting
+Section for any encountered problems and their (temporary) fixes.
+
+### 01: Git hooks using 'Rusty Hook' under Windows
+Initialization may not create the necessary hook files.
+Manually create files `.git/hooks/{pre-commit, pre-push}` and enter cargo commands to run.
