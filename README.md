@@ -33,6 +33,17 @@ Refer to `.circleci/config.yml`
 
 
 
+## Google Kubernetes Engine
+
+Create the project
+
+Create the cluster 
+```sh
+# Deploy Cluster in Zürich (https://cloud.google.com/about/locations?hl=de#europe)
+# Assumed to be closest data center
+gcloud container clusters create-auto f7-cts-backend-cluster --location=europe-west6
+```
+
 
 
 

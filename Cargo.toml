@@ -2,7 +2,7 @@
 name = "f7-cts-backend"
 version = "0.1.0"
 authors = ["Thomas Auer <thauer@edu.aau.at>"]
-edition = "2024"
+edition = "2021"
 description = "A simple CTS-Backend server over Actix as interview challenge"
 repository = "https://github.com/ThompsonA93/CTS-Backend"
 license = "MIT"
