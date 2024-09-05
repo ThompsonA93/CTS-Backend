@@ -49,9 +49,8 @@ Refer to `.circleci/config.yml`
 Section for any encountered problems and their (temporary) fixes.
 
 ### 01: Git hooks using 'Rusty Hook' under Windows
-Initialization may not create the necessary hook files.
+Git hooks is not officially supported under windows. Required workaround using manual shell-scripts
 Manually create files `.git/hooks/{pre-commit, pre-push}` and enter cargo commands to run.
-
 ```sh
 # .git\hooks\pre-commit
 #!/bin/bash
