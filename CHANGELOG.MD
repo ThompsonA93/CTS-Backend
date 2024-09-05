@@ -1,3 +1,8 @@
+05.09.2024 08:12 - 
+- Dockerize App using Dockerfile & Docker Compose
+  - FIXME :: Static IP/Port allocation
+- Git hooks
+
 02.09.2024 17:14 - 21:02
 - Writing documentary: Project, Design, Implementation, Tasks
 - Checkout images on Docker: Tags, image size, convenience of setup

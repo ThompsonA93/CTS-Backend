@@ -1,0 +1,6 @@
+services:
+  cts-backend:
+    container_name: cts-backend
+    build: .
+    ports:
+      - "8080:8080"
