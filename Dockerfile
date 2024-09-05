@@ -1,4 +1,4 @@
-FROM rust:latest as core
+FROM rust:latest
 
 COPY . .
 RUN cargo install --path .

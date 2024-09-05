@@ -11,7 +11,8 @@ jobs:
     docker:
       # Specify the version you desire here
       # See: https://circleci.com/developer/images/image/cimg/base
-      - image: .circleci/images/primary/Dockerfile
+      # - image: .circleci/images/primary/Dockerfile
+      - image: rust:latest
 
     # Add steps to the job
     # See: https://circleci.com/docs/jobs-steps/#steps-overview & https://circleci.com/docs/configuration-reference/#steps
@@ -27,7 +28,7 @@ jobs:
             docker build .
   test:
     docker:
-      - image: .circleci/images/primary/Dockerfile
+      - image: rust:latest
     steps:
       - checkout
       - run:
@@ -41,7 +42,7 @@ jobs:
 
   publish:
     docker:
-      - image: .circleci/images/primary/Dockerfile
+      - image: rust:latest
     steps:
       - checkout
       - run:

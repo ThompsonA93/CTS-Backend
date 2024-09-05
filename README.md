@@ -63,3 +63,4 @@ cargo build --release
 cargo test --release
 docker compose build --no-cache
 ```
+### 02: 'invalid reference format: repository name (images/primary/Dockerfile) must be lowercase'
