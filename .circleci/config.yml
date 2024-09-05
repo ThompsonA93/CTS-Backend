@@ -12,7 +12,7 @@ jobs:
       # Specify the version you desire here
       # See: https://circleci.com/developer/images/image/cimg/base
       # - image: .circleci/images/primary/Dockerfile
-      - image: rust:latest
+      - image: cimg/rust:1.77.2
 
     # Add steps to the job
     # See: https://circleci.com/docs/jobs-steps/#steps-overview & https://circleci.com/docs/configuration-reference/#steps
@@ -22,37 +22,24 @@ jobs:
           name: Build cargo
           command: |
             cargo build
-      - run:
-          name: Build Docker image
-          command: |
-            docker build .
   test:
     docker:
-      - image: rust:latest
+      - image: cimg/rust:1.77.2
     steps:
       - checkout
-      - run:
-          name: Test dockerized application
-          command: |
-            docker-compose build
       - run:
           name: Test cargo publishing
           command: |
             cargo publish --dry-run
-
   publish:
     docker:
-      - image: rust:latest
+      - image: cimg/rust:1.77.2
     steps:
       - checkout
       - run:
           name: Publish cargo
           command: |
-            cargo publish
-      - run:
-          name: Publish Dockerhub
-          command: |
-            docker build -t thompsona93/cts-backend . && docker push thompsona93/cts-backend            
+            cargo publish --token 
             
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/workflows/ & https://circleci.com/docs/configuration-reference/#workflows

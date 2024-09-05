@@ -1,5 +1,5 @@
 # Secrets
-.env
+credentials.toml
 
 # Build files
 /target
