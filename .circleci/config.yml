@@ -18,18 +18,47 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Run tests
+          name: Build cargo
           command: |
-            docker-compose -f ./docker-compose.test.yml up
+            cargo build
       - run:
           name: Build Docker image
           command: |
             docker build .
-    
+  test:
+    docker:
+      - image: cimg/base:current
+    steps:
+      - checkout
+      - run:
+          name: Test dockerized application
+          command: |
+            docker-compose build
+      - run:
+          name: Test cargo publishing
+          command: |
+            cargo publish --dry-run
+
+  publish:
+    docker:
+      - image: cimg/base:current
+    steps:
+      - checkout
+      - run:
+          name: Publish cargo
+          command: |
+            cargo publish
+      - run:
+          name: Publish Dockerhub
+          command: |
+            docker build -t thompsona93/cts-backend . && docker push thompsona93/cts-backend            
+            
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/workflows/ & https://circleci.com/docs/configuration-reference/#workflows
 workflows:
-  say-hello-workflow: # This is the name of the workflow, feel free to change it to better match your workflow.
+  ci-cd: # This is the name of the workflow, feel free to change it to better match your workflow.
     # Inside the workflow, you define the jobs you want to run.
     jobs:
-      - say-hello
+      - build
+      - test
+      - publish

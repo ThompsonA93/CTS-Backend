@@ -8,4 +8,4 @@ edition = "2021"
 actix-web = "4"
 
 [dev-dependencies]
-rusty-hook = "^0.11.2"
+# rusty-hook = "^0.11.2"

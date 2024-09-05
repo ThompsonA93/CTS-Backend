@@ -52,3 +52,14 @@ Section for any encountered problems and their (temporary) fixes.
 Initialization may not create the necessary hook files.
 Manually create files `.git/hooks/{pre-commit, pre-push}` and enter cargo commands to run.
 
+```sh
+# .git\hooks\pre-commit
+#!/bin/bash
+cargo check
+cargo build --release
+
+# .git\hooks\pre-push
+#!/bin/bash
+cargo test --release
+docker compose build --no-cache
+```
