@@ -1,6 +1,6 @@
 [package]
 name = "f7-cts-backend"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Thomas Auer <thauer@edu.aau.at>"]
 edition = "2021"
 description = "A simple CTS-Backend server over Actix as interview challenge"

@@ -111,9 +111,6 @@ For each of these clusters, the application must be loaded and deployed with var
 
 
 
-
-
-
 # Troubleshooting
 Section for any encountered problems and their (temporary) fixes.
 
@@ -132,8 +129,8 @@ cargo build --release
 cargo test --release
 docker compose build --no-cache
 ```
-### 02: 'invalid reference format: repository name (images/primary/Dockerfile) must be lowercase'
+### 02: invalid reference format: repository name (images/primary/Dockerfile) must be lowercase
 Workaround using CircleCIs container of cmg/rust:latest
 
-### 03: 'error: failed to create deployment: the server could not find the requested resource (post deployments.apps)'
+### 03: error: failed to create deployment: the server could not find the requested resource (post deployments.apps)
 Workaround using standard images and installation within them.

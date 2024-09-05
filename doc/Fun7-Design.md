@@ -161,18 +161,25 @@ where more performance is required -- depending on population density, time and 
 # IV. Task identification
 Following the project statements and it's requirements:
 
-- [ ] Project deployment in one week (29.08.24 16:00 UTC+2 - 05.08.24 16:00 UTC+2) 
+- [X] Project deployment in one week (29.08.24 16:00 UTC+2 - 05.08.24 16:00 UTC+2) 
 - [ ] Production-ready solution
-- [ ] Agile-compliant DevOps
+- [X] Agile-compliant DevOps
 - [X] Development of a CTS backend
     - [X] CTS written in any appropriate language: **Rust (Actix)**
     - [X] Dockerize the CTS app: **Dockerfile**
     - [X] Automated application build on git commit: **Git hooks**
-- [ ] Hosted on VCS-Server
+- [X] Hosted on VCS-Server
     - [X] CI/CD pipeline: **CircleCI**
     - [X] New version build on git push: **CircleCI via Dockerhub**
-- [ ] Leverage Google Cloud or IaC: **Google Cloud: GKE**
+- [ ] Leverage Google Cloud or IaC: **Google Cloud: GKE + GCR**
     - [ ] Automated scaling of compute nodes
     - [ ] Fail-safety of compute nodes
-- [ ] Provide README with all necessary steps for software execution
-- [ ] Optional: [Post-Mortem](./Post-Mortem.md)
+- [X] Provide README with all necessary steps for software execution
+
+See [Post-Mortem](./Post-Mortem.md) for post-submission review.
+
+References:
+- Github.com: https://github.com/ThompsonA93/CTS-Backend
+- CircleCi.com: https://app.circleci.com/pipelines/github/ThompsonA93/CTS-Backend 
+- Crates.io: https://crates.io/crates/f7-cts-backend 
+- Dockerhub.com: https://hub.docker.com/repository/docker/thompsona93/cts-backend/general 

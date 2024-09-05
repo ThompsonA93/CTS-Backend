@@ -19,11 +19,6 @@
 - Git hooks
 - Setup CI/CD over CircleCI
 
-
-
-
-
-
 02.09.2024 17:14 - 21:02
 - Writing documentary: Project, Design, Implementation, Tasks
 - Checkout images on Docker: Tags, image size, convenience of setup
