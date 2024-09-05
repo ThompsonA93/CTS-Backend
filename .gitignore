@@ -1,4 +1,9 @@
+# Secrets
+.env
+
+# Build files
 /target
 *.lock
 
+# Other
 *.pdf

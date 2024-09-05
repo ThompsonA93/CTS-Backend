@@ -114,11 +114,16 @@ We check whether the code as a whole is eligible to be committed to the code rep
 | Free Version | Limited | **Available** | Limited |
 
 
+Jenkins appears to be an optimal solution.
+Given that there is not enough time left to complete the challenge at this point (Deadline in 6 hours), CircleCI will be used.
+
 
 ### Cloud and container orchestration
 To orchestrate containers, we utilize Docker as container engine.
 This can extend to Kubernetes, to distribute container runtimes accross a given network architecture.
 Cloud provisioning can be utilized via Cloud service providers which offer Kubernetes interfaces, including AWS, Microsoft and Google.
+
+Given the requirement of leveraging Google Cloud, the Google kubernetes engine will be used.
 
 #### Worker node failure resilience
 1. Optimizing node stability
@@ -138,23 +143,16 @@ Cloud provisioning can be utilized via Cloud service providers which offer Kuber
 - Horizontal scaling: Horizontal scaling is adding additional pods to the node.
 - Vertical scaling: Vertical scaling is adding ressources to a singular node or pod.
 
-
-
-
 # III. Implementation
 - Programming language: 
-  - Rust, over Actix.
+  - Rust using Actix.
 - CI/CD:
-  - Local: Rust over Cargo, Git branches
-  - Pre-Commit: Pre-Hooks, Jenkins
-  - Post-Commit: Github Actions, Jenkins on Google Cloud (optional)
+  - Local build and test: Git hooks, Docker tests
+  - Remote build and test: CircleCI
+  - Deploy: Software deployment as docker image
 - Orchestration:
   - Docker: Custom Image
   - Google Kubernetes Engine: Container deployment and orchestration
-
-
-
-
 
 # IV. Task identification
 Following the project statements and it's requirements:
@@ -162,14 +160,15 @@ Following the project statements and it's requirements:
 - [ ] Project deployment in one week (29.08.24 16:00 UTC+2 - 05.08.24 16:00 UTC+2) 
 - [ ] Production-ready solution
 - [ ] Agile-compliant DevOps
-- [ ] Development of a CTS backend
-    - [ ] CTS written in any appropriate language: **Rust (Actix)**
-    - [ ] Dockerize the CTS app: **Dockerfile**
-    - [ ] Automated application build on git commit: **Git hooks**
+- [X] Development of a CTS backend
+    - [X] CTS written in any appropriate language: **Rust (Actix)**
+    - [X] Dockerize the CTS app: **Dockerfile**
+    - [X] Automated application build on git commit: **Git hooks**
 - [ ] Hosted on VCS-Server
-    - [ ] CI/CD pipeline: **Jenkins**
-    - [ ] Opt.: New version build on git push: **Git hooks**
+    - [X] CI/CD pipeline: **CircleCI**
+    - [ ] New version build on git push: **CircleCI via Dockerhub**
 - [ ] Leverage Google Cloud or IaC: **Google Cloud: GKE**
     - [ ] Automated scaling of compute nodes
     - [ ] Fail-safety of compute nodes
 - [ ] Provide README with all necessary steps for software execution
+- [ ] Optional: [Post-Mortem](./Post-Mortem.md)

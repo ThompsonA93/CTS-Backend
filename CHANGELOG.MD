@@ -1,8 +1,12 @@
-05.09.2024 08:12 - 
+05.09.2024 08:12 - 10:39
 - Dockerize App using Dockerfile & Docker Compose
   - FIXME :: Static IP/Port allocation
+  - FIXME :: Optimize docker build
+  - FIXME :: Docker tests
 - Git hooks
 - Setup CI/CD over CircleCI
+- Update documentary
+- Publish to Dockerhub
 
 02.09.2024 17:14 - 21:02
 - Writing documentary: Project, Design, Implementation, Tasks
