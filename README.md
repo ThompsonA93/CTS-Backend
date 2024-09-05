@@ -55,6 +55,7 @@ Manually create files `.git/hooks/{pre-commit, pre-push}` and enter cargo comman
 ```sh
 # .git\hooks\pre-commit
 #!/bin/bash
+cp ./Dockerfile ./.circleci/images/primary/Dockerfile
 cargo check
 cargo build --release
 

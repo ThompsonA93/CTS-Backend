@@ -1,4 +1,4 @@
-05.09.2024 08:12 - 10:39
+05.09.2024 08:12 - 10:39, 11:05 - 16:00
 - Dockerize App using Dockerfile & Docker Compose
   - FIXME :: Static IP/Port allocation
   - FIXME :: Optimize docker build
