@@ -10,9 +10,9 @@ jobs:
     # See: https://circleci.com/docs/executor-intro/ & https://circleci.com/docs/configuration-reference/#executor-job
     docker:
       # Specify the version you desire here
-      # See: https://circleci.com/developer/images/image/cimg/base
+      # See: https://circleci.com/developer/images/image/cimg/rust
       # - image: .circleci/images/primary/Dockerfile
-      - image: cimg/rust:1.77.2
+      - image: cimg/rust:1.80.1
 
     # Add steps to the job
     # See: https://circleci.com/docs/jobs-steps/#steps-overview & https://circleci.com/docs/configuration-reference/#steps
@@ -24,7 +24,7 @@ jobs:
             cargo build
   test:
     docker:
-      - image: cimg/rust:1.77.2
+      - image: cimg/rust:1.80.1
     steps:
       - checkout
       - run:
@@ -33,7 +33,7 @@ jobs:
             cargo publish --dry-run
   publish:
     docker:
-      - image: cimg/rust:1.77.2
+      - image: cimg/rust:1.80.1
     steps:
       - checkout
       - run:
