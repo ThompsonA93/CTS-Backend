@@ -131,17 +131,21 @@ Given the requirement of leveraging Google Cloud, the Google kubernetes engine w
 2. Optimizing pod stability
     - Using the configuration 'pod-eviction-timeout' to handle disruptions gracefully.
 3. Disaster Recovery 
-    - asdf
+    - TODO
 4. Failure simulation during testing
-    - asdf
+    - TODO
 5. Monitoring using Prometheus (Google Cloud Managed Service)
-    - asdf
+    - TODO
 6. Zone-specific scaling of services
-    - asdf
+    - TODO
 
 #### Worker node scaling
 - Horizontal scaling: Horizontal scaling is adding additional pods to the node.
 - Vertical scaling: Vertical scaling is adding ressources to a singular node or pod.
+
+Optimally, we scale horizontal depending on expansion to new zonal areas. Vertical scaling makes sense 
+where more performance is required -- depending on population density, time and clust cost.
+
 
 # III. Implementation
 - Programming language: 
@@ -166,7 +170,7 @@ Following the project statements and it's requirements:
     - [X] Automated application build on git commit: **Git hooks**
 - [ ] Hosted on VCS-Server
     - [X] CI/CD pipeline: **CircleCI**
-    - [ ] New version build on git push: **CircleCI via Dockerhub**
+    - [X] New version build on git push: **CircleCI via Dockerhub**
 - [ ] Leverage Google Cloud or IaC: **Google Cloud: GKE**
     - [ ] Automated scaling of compute nodes
     - [ ] Fail-safety of compute nodes

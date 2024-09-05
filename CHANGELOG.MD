@@ -1,13 +1,28 @@
-05.09.2024 08:12 - 10:39, 11:05 - 16:00
+05.09.2024 14:54 - 15:21
+- Add Kubernetes-YAML
+- Cleaning repository
+- Final build & deploy actions
+- Update documentary
+- Finish up
+
+05.09.2024 11:05 - 14:14
+- Update documentary
+- Publish to Cargo and Dockerhub
+- Major troubleshooting on CI/CD
+- Attempt to setup Gcloud
+
+05.09.2024 08:12 - 10:39, 11:05 - 14:30
 - Dockerize App using Dockerfile & Docker Compose
   - FIXME :: Static IP/Port allocation
   - FIXME :: Optimize docker build
-  - FIXME :: Docker tests
+  - FIXME :: Container testing
 - Git hooks
 - Setup CI/CD over CircleCI
-- Update documentary
-- Publish to Dockerhub
-- Major troubleshooting on CI/CD
+
+
+
+
+
 
 02.09.2024 17:14 - 21:02
 - Writing documentary: Project, Design, Implementation, Tasks
